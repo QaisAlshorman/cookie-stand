@@ -1,5 +1,3 @@
-
-
 'use strict ';
 // global array for working houers
 const workHourse = ['6 am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '7pm ',
@@ -22,29 +20,22 @@ function Shops(locationName, minCustmer, maxCustmer, avgCoockies) {
   this.avgCoockies = avgCoockies,
   //empty array to calculate the # number each houre
 
-  customerEachHourse = [] ;
-  
-  //empty array to caculate coockies per hours
- coockiesEachHourse = [] ;
+  this.customerEachHourse = [],
 
-  this.totalCoockesPerDay = 0;
+  //empty array to caculate coockies per hours
+  this.coockiesEachHourse = [],
+
+  this.totalCoockesPerDay = 0,
   shopsArray.push(this);
 
 }
 
 
-
-let seattle = new Shops('Seattle', 23, 65, 6.3);
-let tokyo = new Shops('Tokyo', 3, 24, 1.2);
-let dubai = new Shops('Dubai', 11, 38, 3.7);
-let paris = new Shops('Paris', 20, 38, 2.3);
-let lima = new Shops('Lima', 2, 16, 4.6);
-
 Shops.prototype.calCustmerPerHourse = function () {
-  for (let i = 0; i < workHourse.length ; i++) {
+  for (let i = 0; i < workHourse.length; i++) {
 
-    this.customerEachHourse.push(random(this.minCustmer, this.theMaximum));
-
+    this.customerEachHourse.push(random(this.minCustmer, this.theMaximum)),
+    console.log(this.calCustmerPerHourse);
 
   }
 };
@@ -52,15 +43,23 @@ Shops.prototype.calCustmerPerHourse = function () {
 
 Shops.prototype.calCookiesEachHourse = function () {
   for (let i = 0; i < workHourse.length; i++) {
-    this.coockiesEachHourse.push(Math.floor(this.avgCoockies * this.customerEachHourse[i]));
-    this.total += this.CustmerEachHoure[i];
-    this.totalCoockesPerDay += this.coockiesEachHourse[i];
+    let x=Math.floor(this.avgCoockies * this.customerEachHourse[i]);
+    this.coockiesEachHourse.push(x),
+
+    this.total += this.CustmerEachHoure[i],
+    this.totalCoockesPerDay += this.coockiesEachHourse[i],
 
   }
 };
 
+let seattle = new Shops('Seattle', 23, 65, 6.3);
+let tokyo = new Shops('Tokyo', 3, 24, 1.2);
+let dubai = new Shops('Dubai', 11, 38, 3.7);
+let paris = new Shops('Paris', 20, 38, 2.3);
+let lima = new Shops('Lima', 2, 16, 4.6);
 
-console.log(customElements);
+
+
 
 
 
@@ -84,7 +83,7 @@ function makeHeader() {
 
   // create th
   let firsTh = document.createElement('th');
-  headerRaw.appendChild(firsTh);
+  headerRaw.appendChild(firsTh),
   firsTh.textContent = 'Name';
 
   //hourse
@@ -141,6 +140,7 @@ function makeFooter() {
 
   let megTotal = 0;
   let totalEachHourse = 0;
+  console.log(shopsArray);
   for (let i = 0; i < workHourse.length; i++) {
 
     for (let j = 0; j < shopsArray.length; j++) {
@@ -164,9 +164,8 @@ makeFooter();
 
 for (let i = 0; i < shopsArray.length; i++) {
 
-  shopsArray[i].calCustmerPerHourse[i],
-  shopsArray[i].calCookiesEachHourse[i],
+  shopsArray[i].calCustmerPerHourse[i];
+  shopsArray[i].calCookiesEachHourse[i];
   shopsArray[i].render();
 
 }
-console.log(shopsArray);
