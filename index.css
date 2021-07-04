@@ -5,8 +5,28 @@ body {
   width: 1000px;
   align-content: center;
   margin: auto;
- 
+ background-color: #02234670;
 }
+
+
+
+
+#content {
+  margin: auto;
+  width: 70%;
+  align-content:center;
+  float: right;
+}
+
+#result{
+
+  margin: auto;
+  width: 70%;
+  align-content: center;
+ float: left;
+}
+
+
 
 li {
   font-family: 'Kalam', cursive;
@@ -28,7 +48,7 @@ h1 {
 
 h2 {
     background-color: #85b3f0a4;
-    color: white;
+    color: rgb(102, 93, 93);
     font-family: 'Kalam', cursive;
     margin-top: 1px;
 }
@@ -101,7 +121,7 @@ nav {
     list-style-type: none;
     float: left;
     display: block;
-    color: rgba(44, 4, 4, 0.623);
+    color: rgba(233, 17, 17, 0.623);
     padding: 8px 16px;
     text-decoration: none;
     
@@ -118,9 +138,6 @@ nav {
     
   }
   
-  legend {
-    font-size: 30px;
-  }
   
   tr {
    
@@ -149,7 +166,7 @@ nav {
     right: 30px;
   }
   
-  #addLocationForm {
+  #locationNameForm {
     float: left;
   }
   
@@ -161,9 +178,7 @@ nav {
     float: right;
   }
   
-  #merchandise {
-    align-content: center;
-  }
+  
   
   #cookiepic {
     float: right;
@@ -194,10 +209,7 @@ nav {
     font-family: 'Kalam', cursive;
   }
   
-  #merch {
-    text-align: center;
-  }
-  
+ 
   fieldset {
     text-align: center;
     font-family: 'Kalam', cursive;
@@ -205,11 +217,6 @@ nav {
     
   }
   
-  #charts {
-    display: flex;
-    flex-direction: column;
-   
-  }
   
   legend {
     font-size: 25px;
